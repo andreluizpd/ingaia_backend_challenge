@@ -3,6 +3,8 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { pricesPerSquareMetersRouter } from './pricePerSquareMeter/pricesPerSquareMeters.router';
+import { errorHandler } from './middleware/error.middleware';
+import { notFoundHandler } from './middleware/not-found.middleware';
 
 dotenv.config();
 
@@ -17,6 +19,9 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use('/api/v1/pricesPerSquareMeters', pricesPerSquareMetersRouter);
+
+app.use(errorHandler);
+app.use(notFoundHandler);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
