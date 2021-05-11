@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import { pricesPerSquareMetersRouter } from './pricePerSquareMeter/pricesPerSquareMeters.router';
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ const app = express();
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+app.use('/api/v1/pricesPerSquareMeters', pricesPerSquareMetersRouter);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
