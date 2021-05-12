@@ -9,7 +9,8 @@ export const pricesPerSquareMetersRouter = express.Router();
 
 pricesPerSquareMetersRouter.get('/', async (req: Request, res: Response) => {
   try {
-    const items: PricePerSquareMeter[] = await pricePerSquareMeterService.findAll();
+    const items: PricePerSquareMeter[] =
+      await pricePerSquareMeterService.findAll();
 
     res.status(200).send(items);
   } catch (e) {
@@ -39,14 +40,13 @@ pricesPerSquareMetersRouter.put('/:id', async (req: Request, res: Response) => {
   try {
     const itemUpdate: PricePerSquareMeter = req.body;
 
-    const existingItem: PricePerSquareMeter = await pricePerSquareMeterService.find(
-      id
-    );
+    const existingItem: PricePerSquareMeter =
+      await pricePerSquareMeterService.find(id);
 
     if (existingItem) {
       const updatedItem = await pricePerSquareMeterService.update(
         id,
-        itemUpdate
+        itemUpdate,
       );
       return res.status(200).json(updatedItem);
     }

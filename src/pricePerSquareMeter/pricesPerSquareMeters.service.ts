@@ -21,7 +21,7 @@ export const find = async (id: number): Promise<PricePerSquareMeter> =>
 
 export const update = async (
   id: number,
-  itemUpdate: BasePricePerSquareMeter
+  itemUpdate: BasePricePerSquareMeter,
 ): Promise<PricePerSquareMeter | null> => {
   const pricePerSqrMeter = await find(id);
 
