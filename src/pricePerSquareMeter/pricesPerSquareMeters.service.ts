@@ -8,7 +8,7 @@ let pricesPerSquareMeters: PricesPerSquareMeters = {
   1: {
     id: 1,
     name: 'Preço por Metro Quadrado',
-    price: 599,
+    price: 2,
     description: 'preço por metro quadrado na cidade de Videira',
   },
 };
