@@ -16,7 +16,7 @@ let pricesPerSquareMeters: PricesPerSquareMeters = {
 export const findAll = async (): Promise<PricePerSquareMeter[]> =>
   Object.values(pricesPerSquareMeters);
 
-const find = async (id: number): Promise<PricePerSquareMeter> =>
+export const find = async (id: number): Promise<PricePerSquareMeter> =>
   pricesPerSquareMeters[id];
 
 export const update = async (
