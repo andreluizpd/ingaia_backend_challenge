@@ -7,3 +7,8 @@ script:
   - npm install
   - echo 'Testing!'
   - npm run test:unit
+deploy:
+  provider: heroku
+  api_key:
+    secure: $SECURE_KEY
+  app: $APP
