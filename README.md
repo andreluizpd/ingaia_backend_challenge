@@ -4,6 +4,9 @@ Essa API é utilizada para gerar um valor por metro quadrado em formato JSON e a
 
 A aplicação online está rodando neste link: [APP](https://ingaia-api-1.herokuapp.com/)
 
+O método mais simples de testar a aplicação é pelo browser, um exemplo é [https://ingaia-api-1.herokuapp.com/api/v1/pricesPerSquareMeters](https://ingaia-api-1.herokuapp.com/api/v1/pricesPerSquareMeters)
+Neste caso é retornado o valor fixo para o cálculo do valor do imóvel.
+
 Está sendo utilizado o serviço de CI/CD do Travis CI, assim, após o envio de código ao github o mesmo é testado e caso passe é realizado o build no heroku automaticamente.
 
 ### Tecnologias
@@ -36,7 +39,7 @@ Instalação das dependências:
 
 ## Rodando o aplicativo
 
-Para rodas o aplicativo com o docker é bem simples, basta realizar os seguintes passos:
+Para rodar o aplicativo com o docker é bem simples, basta realizar os seguintes passos:
 
 Criação do arquivo .env:
 
